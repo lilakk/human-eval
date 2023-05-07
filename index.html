@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Book Summary</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="summary">
+      <div class="tooltip">
+        <button id="submit-annotations" disabled>Submit annotations</button>
+        <span class="tooltiptext" id="tooltip-text">Please complete annotations for all highlighted spans.</span>
+      </div>
+      <button id="clear-annotations">Restart annotations</button>
+      <div class="summary-text" id="summary-text">
+        <!-- Summary goes here -->
+      </div>
+
+      <div class="popup" id="popup">
+        <div class="text-boxes-container">
+          <!-- Text boxes will be created here -->
+        </div>
+        <button onclick="addTextBox()" class="add-textbox-button">+</button>
+      </div>
+
+    </div>
+    <div class="book">
+      <div class="search-container">
+        <button id="clear-button">Clear</button>
+        <input type="text" id="search-text" placeholder="Search text...">
+        <button id="search-button">Enter</button>
+        <button id="prev-button">&uarr;</button>
+        <button id="next-button">&darr;</button>
+        <span id="match-counter">0/0</span>
+      </div>
+      <div class="book-text" id="book-text"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
